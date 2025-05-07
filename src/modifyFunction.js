@@ -12,11 +12,14 @@
 */
 
 function originalFunction(num) {
-  // code
+  return num * num // Повертає квадрат числа
 }
 
 function modifyFunction(originalFunc, multiplier) {
-  // code
+  return function (num) {
+    const originalResult = originalFunc(num) // Викликає оригінальну функцію
+    return originalResult * multiplier // Множить результат на множник
+  }
 }
 
 // Приклад використання
